@@ -21,9 +21,9 @@ def login():
 
     return redirect(authorize_url)
 
-@ui.route('/auth/signin', methods=['GET'])
+@ui.route('/authenticate', methods=['GET'])
 def signin():
     code = request.args.get('code')
     token = request_token(code);
     # Your code logic here
-    return 'Signin GET request received with code: {}'.format(code)
+    return 'Got token from oauth: {}'.format(token)
