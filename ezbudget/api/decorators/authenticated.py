@@ -4,9 +4,8 @@ from jwt import decode, InvalidTokenError, PyJWKClient
 
 def auth_required(func):
     @wraps(func)
-
     def wrapper(*args, **kwargs):
-        authHeader = request.headers.get('Authorization')
+        authHeader = request.headers.get('Authorization') or ''
         token = authHeader.split('Bearer ')[1] if authHeader.startswith('Bearer ') else None
         jwk_url = current_app.config['COGNITO_JWK_URL']
 
