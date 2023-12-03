@@ -9,3 +9,6 @@ Budgeting made easy!
 
 ## Test
 `pytest`
+
+## Lint
+`pylint ezbudget`

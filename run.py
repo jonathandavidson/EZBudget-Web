@@ -1,3 +1,4 @@
+"""Run the application for development."""
 from ezbudget import create_app
 
 if __name__ == "__main__":
