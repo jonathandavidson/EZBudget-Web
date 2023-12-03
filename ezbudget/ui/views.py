@@ -5,10 +5,12 @@ from ezbudget.services.auth_service import request_token
 
 ui = Blueprint('ui', __name__)
 
+
 @ui.route('/')
 def home():
     """Render the home page."""
     return render_template('home.html')
+
 
 @ui.route('/login', methods=['GET'])
 def login():
@@ -23,6 +25,7 @@ def login():
     authorize_url = f'https://{domain}/oauth2/authorize?{query_string}'
 
     return redirect(authorize_url)
+
 
 @ui.route('/authenticate', methods=['GET'])
 def signin():

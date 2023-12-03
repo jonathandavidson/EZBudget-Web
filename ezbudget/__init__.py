@@ -3,6 +3,7 @@ from flask import Flask
 from .api.views import api as api_blueprint
 from .ui.views import ui as ui_blueprint
 
+
 def create_app(config_filename):
     """Create ezbudget app instance"""
     app = Flask(__name__)

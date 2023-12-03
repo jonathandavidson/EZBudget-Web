@@ -3,6 +3,7 @@ from functools import wraps
 from flask import current_app, request
 from jwt import decode, InvalidTokenError, PyJWKClient
 
+
 def auth_required(func):
     """This decorator is used to authenticate requests to the API."""
     @wraps(func)
